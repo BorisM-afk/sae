@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Redirection...</title>
-    <meta http-equiv="refresh" content="0; url=./fr/page1-accueil.php">
-    <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-    <p>Redirection en cours vers le projet <a href="./fr/page1-accueil.php"> SAE - 105</a>...</p>
-</body>
-</html>
+<?php
+// Indique aux moteurs de recherche que la redirection est permanente
+header("HTTP/1.1 301 Moved Permanently");
+// Effectue la redirection vers la nouvelle page
+header("Location: ./fr/page1-accueil.php");
+// On s'assure que le reste du code ne s'exécute pas
+exit();
+?>
